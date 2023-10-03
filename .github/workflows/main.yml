@@ -9,15 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: fetching all commits
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - name: Setup PHP Action
+      - name: setup php 
         uses: shivammathur/setup-php@2.26.0
       - run: php generate.php
-      - name: Push new files back to master.
+      - name: push new files back to master.
         uses: mikeal/publish-to-github-action@1.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
