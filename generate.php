@@ -5,7 +5,7 @@ $txt = "# TIL
 📝Today I Learned \n";
 
 foreach ($directories as $index) {
-    $txt = $txt."(".$index.")[".$index."]\n";
+    $txt = $txt."(".$index.")[https://github.com/adrianochristian/til/tree/main/".$index."]\n";
 }
 
 fwrite($myfile, $txt);
