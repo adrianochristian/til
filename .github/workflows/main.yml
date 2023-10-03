@@ -1,0 +1,17 @@
+name: build readme.md til index
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: fetching all commits
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          from: main
