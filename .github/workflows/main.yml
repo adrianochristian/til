@@ -14,7 +14,6 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          from: main
       - name: Setup PHP Action
         uses: shivammathur/setup-php@2.26.0
       - run: php generate.php
