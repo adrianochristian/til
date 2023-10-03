@@ -1,4 +1,4 @@
-name: build readme.md til index
+name: Build README.md
 
 on:
   push:
@@ -15,3 +15,6 @@ jobs:
         with:
           fetch-depth: 0
           from: main
+      - name: Setup PHP Action
+        uses: shivammathur/setup-php@2.26.0
+      - run: php generate.php
