@@ -18,7 +18,8 @@ foreach ($directories as $index) {
             (https://github.com/adrianochristian/til/blob/main/".$file.")  \n";
     }
 }
-
+echo "Writing the file \n";
 fwrite($myfile, $txt);
 fclose($myfile);
+echo "Finished";
 ?>
